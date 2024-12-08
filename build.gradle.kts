@@ -10,5 +10,9 @@ subprojects {
   repositories {
     mavenCentral()
   }
+
+  tasks.withType(JavaExec::class.java) {
+    jvmArgs = listOf("-Xms15g", "-Xmx15g")
+  }
 }
 
